@@ -166,14 +166,15 @@
 
 		<div class="offcanvas offcanvas-end" tabindex="-1" id="details">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title">Vibrant Tones</h5>
+                <h5 id="offcanvasLabel" class="offcanvas-title">Palette Details</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <h6>Colors:</h6>
-                <div style="background: #FF6F61;" class="border rounded p-2 mb-2">#FF6F61</div>
-                <div style="background: #F7CAC9;" class="border rounded p-2 mb-2">#F7CAC9</div>
-                <div style="background: #92A8D1;" class="border rounded p-2 mb-2">#92A8D1</div>
+                <div id="palette-details">
+                    <h6 id="palette-name"></h6>
+                    <div id="palette-colors"></div>
+                    <p id="palette-description"></p>
+                </div>
             </div>
         </div>
 	</div>

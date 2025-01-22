@@ -4,34 +4,41 @@ async function loadPalettes() {
     renderPalettes(palettes);
 }
 
-function renderPalettes(palettes) {
+const updatePaletteDetails = (palette) => {
+    document.getElementById('palette-name').textContent = palette.name;
+    document.getElementById('palette-colors').innerHTML = palette.colors.map(color => `<div style="background-color: ${color}; width: 25px; height: 25px; display: inline-block; border: 1px solid #000;"></div>`).join('');
+    document.getElementById('palette-description').textContent = palette.description || 'No description available.';
+};
+
+const renderPalettes = (palettes) => {
     const paletteContainer = document.querySelector('.row.g-3');
-    paletteContainer.innerHTML = "";
+    paletteContainer.innerHTML = '';
 
-    palettes.forEach(palette => {
-        const col = document.createElement('div');
-        col.classList.add('col-md-4');
-
-        col.innerHTML = `
-            <div class="palette-card">
-                <div class="palette-colors">
-                    ${palette.hexs.map(color => `<div class="palette-color" style="background: ${color};"></div>`).join('')}
-                </div>
-                <div class="palette-info">
-                    <div class="details">
-                        <h6>${palette.name}</h6>
-                        <p>${palette.hexs.length} Colors</p>
+    palettes.forEach((palette) => {
+        const paletteCard = document.createElement('div');
+        paletteCard.className = 'col-md-4 palette-card';
+        paletteCard.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${palette.name}</h5>
+                    <div class="palette-colors">
+                        ${palette.colors.map(color => `<div style="background-color: ${color}; width: 50px; height: 50px; display: inline-block;"></div>`).join('')}
                     </div>
-                    <i class="ph ph-dots-three-outline details-icon" data-bs-toggle="offcanvas" data-bs-target="#details" aria-label="Details" 
-                       data-palette='${JSON.stringify(palette)}'></i>
+                    <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#details" data-palette="${JSON.stringify(palette)}">Show Details</button>
                 </div>
             </div>
         `;
-        paletteContainer.appendChild(col);
+        paletteContainer.appendChild(paletteCard);
     });
 
-    attachDetailsListeners();
-}
+    const buttons = document.querySelectorAll('.btn-primary[data-bs-toggle="offcanvas"]');
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            const palette = JSON.parse(this.getAttribute('data-palette'));
+            updatePaletteDetails(palette);
+        });
+    });
+};
 
 function attachDetailsListeners() {
     const detailsIcons = document.querySelectorAll('.details-icon');
