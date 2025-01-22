@@ -1,114 +1,92 @@
-async function loadPalettes() {
-    const response = await fetch('palletes.json');
-    const palettes = await response.json();
-    renderPalettes(palettes);
-}
+const palettes = [
+    {
+        name: "Sunny Vibes",
+        hexs: ["#FF5733", "#8D5B4B"],
+        cont: ["red", "brown"],
+        tags: ["brand"],
+        temp: "warm"
+    },
+    {
+        name: "Cool Evening",
+        hexs: ["#6C5B7F", "#355C7D", "#F8B400"],
+        cont: ["blue"],
+        tags: ["pastel", "skin"],
+        temp: "cool"
+    }
+];
 
-const updatePaletteDetails = (palette) => {
-    document.getElementById('palette-name').textContent = palette.name;
-    document.getElementById('palette-colors').innerHTML = palette.colors.map(color => `<div style="background-color: ${color}; width: 25px; height: 25px; display: inline-block; border: 1px solid #000;"></div>`).join('');
-    document.getElementById('palette-description').textContent = palette.description || 'No description available.';
-};
+const searchInput = document.querySelector('input[placeholder="Search"]');
+const filtersOffcanvas = document.querySelector("#filters");
+const detailsOffcanvas = document.querySelector("#details");
+const palettesContainer = document.querySelector(".row.g-3");
+const filterInputs = document.querySelectorAll("#filters .form-check-input");
+const colorRange = document.querySelector("#count");
 
-const renderPalettes = (palettes) => {
-    const paletteContainer = document.querySelector('.row.g-3');
-    paletteContainer.innerHTML = '';
+function renderPalettes(filteredPalettes) {
+    palettesContainer.innerHTML = "";
 
-    palettes.forEach((palette) => {
-        const paletteCard = document.createElement('div');
-        paletteCard.className = 'col-md-4 palette-card';
-        paletteCard.innerHTML = `
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">${palette.name}</h5>
-                    <div class="palette-colors">
-                        ${palette.colors.map(color => `<div style="background-color: ${color}; width: 50px; height: 50px; display: inline-block;"></div>`).join('')}
+    filteredPalettes.forEach((palette) => {
+        const card = document.createElement("div");
+        card.className = "col-md-4";
+
+        card.innerHTML = `
+            <div class="palette-card">
+                <div class="palette-colors">
+                    ${palette.hexs.map(color => `<div class="palette-color" style="background: ${color};"></div>`).join("")}
+                </div>
+                <div class="palette-info">
+                    <div class="details">
+                        <h6>${palette.name}</h6>
+                        <p>${palette.hexs.length} Colors</p>
                     </div>
-                    <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#details" data-palette="${JSON.stringify(palette)}">Show Details</button>
+                    <i class="ph ph-dots-three-outline details-icon" data-bs-toggle="offcanvas" data-bs-target="#details" aria-label="Details"></i>
                 </div>
             </div>
         `;
-        paletteContainer.appendChild(paletteCard);
-    });
 
-    const buttons = document.querySelectorAll('.btn-primary[data-bs-toggle="offcanvas"]');
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            const palette = JSON.parse(this.getAttribute('data-palette'));
-            updatePaletteDetails(palette);
-        });
-    });
-};
-
-function attachDetailsListeners() {
-    const detailsIcons = document.querySelectorAll('.details-icon');
-    detailsIcons.forEach(icon => {
-        icon.addEventListener('click', function () {
-            const palette = JSON.parse(this.getAttribute('data-palette'));
-            showPaletteDetails(palette);
-        });
+        card.querySelector(".details-icon").addEventListener("click", () => showDetails(palette));
+        palettesContainer.appendChild(card);
     });
 }
 
-function showPaletteDetails(palette) {
-    const detailsContainer = document.querySelector('.offcanvas-body');
-    detailsContainer.innerHTML = `<h6>Colors:</h6>`;
+function showDetails(palette) {
+    detailsOffcanvas.querySelector(".offcanvas-title").textContent = palette.name;
 
-    palette.hexs.forEach(hex => {
-        detailsContainer.innerHTML += `
-            <div style="background: ${hex};" class="border rounded p-2 mb-2">${hex}</div>
-        `;
+    const colorsContainer = detailsOffcanvas.querySelector(".offcanvas-body");
+    colorsContainer.innerHTML = `
+        <h6>Colors:</h6>
+        ${palette.hexs.map(color => `
+            <div style="background: ${color};" class="border rounded p-2 mb-2">${color}</div>
+        `).join("")}
+    `;
+}
+
+function filterPalettes() {
+    const searchQuery = searchInput.value.toLowerCase();
+    const activeFilters = Array.from(filterInputs)
+        .filter(input => input.checked)
+        .reduce((acc, input) => {
+            if (!acc[input.name]) acc[input.name] = [];
+            acc[input.name].push(input.value);
+            return acc;
+        }, {});
+    const colorCount = colorRange.value;
+
+    const filtered = palettes.filter(palette => {
+        const matchesSearch = palette.name.toLowerCase().includes(searchQuery);
+        const matchesFilters = Object.entries(activeFilters).every(([key, values]) =>
+            values.some(value => palette[key]?.includes(value))
+        );
+        const matchesColorCount = palette.hexs.length <= colorCount;
+
+        return matchesSearch && matchesFilters && matchesColorCount;
     });
 
-    const offcanvas = new bootstrap.Offcanvas(document.getElementById('details'));
-    offcanvas.show();
+    renderPalettes(filtered);
 }
 
-function setupSearch(palettes) {
-    const searchInput = document.querySelector('input[placeholder="Search"]');
+searchInput.addEventListener("input", filterPalettes);
+filterInputs.forEach(input => input.addEventListener("change", filterPalettes));
+colorRange.addEventListener("input", filterPalettes);
 
-    searchInput.addEventListener('input', function () {
-        const searchValue = this.value.toLowerCase();
-        const filteredPalettes = palettes.filter(palette => palette.name.toLowerCase().includes(searchValue));
-        renderPalettes(filteredPalettes);
-    });
-}
-
-function setupFilters(palettes) {
-    const filterElements = {
-        colors: document.querySelectorAll('input[type="checkbox"][value]'),
-        temperature: document.querySelectorAll('input[type="checkbox"][value]'),
-        tags: document.querySelectorAll('input[type="checkbox"][value]')
-    };
-
-    Object.values(filterElements).forEach(filterGroup => {
-        filterGroup.forEach(filter => {
-            filter.addEventListener('change', trackFilters);
-        });
-    });
-
-    function trackFilters() {
-        const selectedColors = Array.from(filterElements.colors).filter(input => input.checked).map(input => input.value);
-        const selectedTemp = Array.from(filterElements.temperature).filter(input => input.checked).map(input => input.value);
-        const selectedTags = Array.from(filterElements.tags).filter(input => input.checked).map(input => input.value);
-
-        const filteredPalettes = palettes.filter(palette => {
-            const matchColors = selectedColors.length === 0 || selectedColors.some(color => palette.cont.includes(color));
-            const matchTemp = selectedTemp.length === 0 || selectedTemp.includes(palette.temp);
-            const matchTags = selectedTags.length === 0 || selectedTags.some(tag => palette.tags.includes(tag));
-            return matchColors && matchTemp && matchTags;
-        });
-
-        renderPalettes(filteredPalettes);
-    }
-}
-
-async function init() {
-    const response = await fetch('palletes.json');
-    const palettes = await response.json();
-    renderPalettes(palettes);
-    setupSearch(palettes);
-    setupFilters(palettes);
-}
-
-document.addEventListener('DOMContentLoaded', init);
+renderPalettes(palettes);
