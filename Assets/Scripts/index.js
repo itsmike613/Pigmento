@@ -61,10 +61,8 @@ function filterPalettes() {
         );
     }
 
-    if (!showAllCheckbox.checked) {
-        const colorCount = parseInt(colorRange.value, 10);
-        filteredPalettes = filteredPalettes.filter(palette => palette.hexs.length === colorCount);
-    }
+    const colorCount = parseInt(colorRange.value, 10);
+    filteredPalettes = filteredPalettes.filter(palette => palette.hexs.length === colorCount);
 
     const colorTags = Array.from(filterInputs).filter(input => input.checked).map(input => input.value);
     if (colorTags.length > 0) {
@@ -89,14 +87,5 @@ function filterPalettes() {
 searchInput.addEventListener("input", filterPalettes);
 filterInputs.forEach(input => input.addEventListener("change", filterPalettes));
 colorRange.addEventListener("input", filterPalettes);
-showAllCheckbox.addEventListener("change", toggleSlider);
-
-function toggleSlider() {
-    if (showAllCheckbox.checked) {
-        colorRange.disabled = true;
-    } else {
-        colorRange.disabled = false;
-    }
-}
 
 fetchPalettes();
