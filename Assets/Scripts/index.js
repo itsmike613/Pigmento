@@ -11,14 +11,14 @@ async function fetchPalettes() {
     try {
         const response = await fetch('palettes.json');
         palettes = await response.json();
-        renderPalettes(palettes); // Render palettes after fetching
+        renderPalettes(palettes);
     } catch (error) {
         console.error('Error fetching palettes:', error);
     }
 }
 
 function renderPalettes(filteredPalettes) {
-    paletteContainer.innerHTML = '';
+    palettesContainer.innerHTML = '';
     filteredPalettes.forEach(palette => {
         const card = document.createElement('div');
         card.classList.add('col-md-4');
@@ -36,7 +36,7 @@ function renderPalettes(filteredPalettes) {
                 </div>
             </div>
         `;
-        paletteContainer.appendChild(card);
+        palettesContainer.appendChild(card);
     });
 }
 
@@ -61,18 +61,18 @@ function filterPalettes() {
         );
     }
 
-    const colorCount = parseInt(countSlider.value, 10);
+    const colorCount = parseInt(colorRange.value, 10);
     filteredPalettes = filteredPalettes.filter(palette => palette.hexs.length === colorCount);
 
-    const colorTags = Array.from(filterForm.querySelectorAll('.form-check-input[type="checkbox"]:checked')).map(input => input.value);
+    const colorTags = Array.from(filterInputs).filter(input => input.checked).map(input => input.value);
     if (colorTags.length > 0) {
         filteredPalettes = filteredPalettes.filter(palette =>
             colorTags.every(tag => palette.tags.includes(tag))
         );
     }
 
-    const selectedTemperature = Array.from(filterForm.querySelectorAll('.form-check-input[type="checkbox"]:checked'))
-        .filter(input => input.value === 'warm' || input.value === 'cool' || input.value === 'neutral')
+    const selectedTemperature = Array.from(filterInputs)
+        .filter(input => ['warm', 'cool', 'neutral'].includes(input.value) && input.checked)
         .map(input => input.value);
 
     if (selectedTemperature.length > 0) {
@@ -84,9 +84,8 @@ function filterPalettes() {
     renderPalettes(filteredPalettes);
 }
 
-
 searchInput.addEventListener("input", filterPalettes);
 filterInputs.forEach(input => input.addEventListener("change", filterPalettes));
 colorRange.addEventListener("input", filterPalettes);
 
-renderPalettes(palettes);
+fetchPalettes();
