@@ -1,0 +1,55 @@
+body {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	background-color: #f8f9fa;
+}
+
+.palette-card {
+	background: #f7f7f7;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	font-size: 0.9rem;
+}
+
+.palette-colors {
+	display: flex;
+	height: 80px;
+}
+
+.palette-color {
+	flex: 1;
+}
+
+.palette-info {
+	padding: 8px 12px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.palette-info .details {
+	flex-grow: 1;
+}
+
+.palette-info .details h6 {
+	margin: 0;
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+.palette-info .details p {
+	margin: 0;
+	color: #888;
+	font-size: 0.75rem;
+}
+
+.palette-info .details-icon {
+	color: #555;
+	font-size: 1.2rem;
+	cursor: pointer;
+}

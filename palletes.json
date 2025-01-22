@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Sunny Vibes",
+        "hexs": ["#FF5733", "#8D5B4B"],
+        "cont": ["red", "brown"],
+        "tags": ["brand"],
+        "temp": "warm"
+    },
+    {
+        "name": "Cool Evening",
+        "hexs": ["#6C5B7F", "#355C7D", "#F8B400"],
+        "cont": ["blue"],
+        "tags": ["pastel", "skin"],
+        "temp": "cool"
+    }
+]

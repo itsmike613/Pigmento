@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="Pigmento" property="og:title" />
+	<meta content="The place to go for color palletes and gradients." property="og:description" />
+	<meta content="https://itsmike613.github.io/pigmento/" property="og:url" />
+	<meta content="https://github.com/itsmike613/pigmento/blob/main/Assets/Images/logo.png?raw=true"
+		property="og:image" />
+	<meta content="#2E8DDF" data-react-helmet="true" name="theme-color" />
+
+	<!-- Tab -->
+	<link rel="icon" type="image/x-icon" href="Assets/Images/logo.png">
+	<title>Pigmento</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Assets/Styles/index.css">
+</head>
+
+<body>
+	<div class="container py-5">
+		<div class="d-flex justify-content-between align-items-center mb-4">
+			<input type="text" class="form-control me-2" placeholder="Search">
+			<button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#filters">Filters</button>
+		</div>
+
+		<div class="row g-3">
+			<div class="col-md-4">
+				<div class="palette-card">
+					<div class="palette-colors">
+						<div class="palette-color" style="background: #C5ADED;"></div>
+						<div class="palette-color" style="background: #F8ABEB;"></div>
+					</div>
+					<div class="palette-info">
+						<div class="details">
+							<h6>Soft Pastels</h6>
+							<p>2 Colors</p>
+						</div>
+						<i class="ph ph-dots-three-outline details-icon" data-bs-toggle="offcanvas" data-bs-target="#details" aria-label="Details"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="palette-card">
+					<div class="palette-colors">
+						<div class="palette-color" style="background: #FF6F61;"></div>
+						<div class="palette-color" style="background: #F7CAC9;"></div>
+						<div class="palette-color" style="background: #92A8D1;"></div>
+					</div>
+					<div class="palette-info">
+						<div class="details">
+							<h6>Vibrant Tones</h6>
+							<p>3 Colors</p>
+						</div>
+						<i class="ph ph-dots-three-outline details-icon" data-bs-toggle="offcanvas" data-bs-target="#details" aria-label="Details"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="filters">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title">Filters</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<form>
+					<div class="mb-3">
+						<label class="form-label">Has the colors</label>
+						<div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="white" id="white">
+								<label class="form-check-label" for="white">White</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="grey" id="grey">
+								<label class="form-check-label" for="grey">Grey</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="black" id="black">
+								<label class="form-check-label" for="black">Black</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="brown" id="brown">
+								<label class="form-check-label" for="brown">Brown</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="red" id="red">
+								<label class="form-check-label" for="red">Red</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="orange" id="orange">
+								<label class="form-check-label" for="orange">Orange</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="yellow" id="yellow">
+								<label class="form-check-label" for="yellow">Yellow</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="green" id="green">
+								<label class="form-check-label" for="green">Green</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="blue" id="blue">
+								<label class="form-check-label" for="blue">Blue</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="purple" id="purple">
+								<label class="form-check-label" for="purple">Purple</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="pink" id="pink">
+								<label class="form-check-label" for="pink">Pink</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Pallete tempature</label>
+						<div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="warm" id="warm">
+								<label class="form-check-label" for="warm">Warm Colors</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="cool" id="cool">
+								<label class="form-check-label" for="cool">Cool Colors</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="neutral" id="neutral">
+								<label class="form-check-label" for="neutral">Neutral Colors</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Pallete tags</label>
+						<div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="pastel" id="pastel">
+								<label class="form-check-label" for="pastel">Pastel</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="brand" id="brand">
+								<label class="form-check-label" for="brand">Brand</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="skin" id="skin">
+								<label class="form-check-label" for="skin">Skin Tones</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="count" class="form-label">Number of colors</label>
+						<input type="range" class="form-range" id="count" min="2" max="64">
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="details">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Vibrant Tones</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <h6>Colors:</h6>
+                <div style="background: #FF6F61;" class="border rounded p-2 mb-2">#FF6F61</div>
+                <div style="background: #F7CAC9;" class="border rounded p-2 mb-2">#F7CAC9</div>
+                <div style="background: #92A8D1;" class="border rounded p-2 mb-2">#92A8D1</div>
+            </div>
+        </div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+	<script src="Assets/Scripts/index.js"></script>
+</body>
+
+</html>
