@@ -5,6 +5,8 @@ const palettesContainer = document.querySelector(".row.g-3");
 const filterInputs = document.querySelectorAll("#filters .form-check-input");
 const colorRange = document.querySelector("#count");
 
+let palettes = [];
+
 async function fetchPalettes() {
     try {
         const response = await fetch('palettes.json');
