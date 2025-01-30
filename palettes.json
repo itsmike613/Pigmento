@@ -261,6 +261,46 @@
         "tags": []
     },
     {
+        "name": "Resurrect 32",
+        "made": "Kerrie Lake",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/resurrect-32-palette-example-palette-usage-example-by-kerrie-lake-5c0037.png"],
+        "hexs": [ "#ffffff", "#fb6b1d", "#e83b3b", "#831c5d", "#c32454", "#f04f78", "#f68181", "#fca790", "#e3c896", "#ab947a", "#966c6c", "#625565", "#3e3546", "#0b5e65", "#0b8a8f", "#1ebc73", "#91db69", "#fbff86", "#fbb954", "#cd683d", "#9e4539", "#7a3045", "#6b3e75", "#905ea9", "#a884f3", "#eaaded", "#8fd3ff", "#4d9be6", "#4d65b4", "#484a77", "#30e1b9", "#8ff8e2"],
+        "cols": ["rainbow"],
+        "tags": []
+    },
+    {
+        "name": "Peachy Pop",
+        "made": "Kerrie Lake",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": [],
+        "hexs": ["#fdffff", "#ff8686", "#fb4771", "#ce186a", "#8f0b5f", "#53034b", "#ad6dea", "#9fb9ff", "#567feb", "#0a547b", "#278c7f", "#0ce7a7", "#acfcad", "#ffec6d", "#ffa763", "#ff4040"],
+        "cols": ["rainbow"],
+        "tags": []
+    },
+    {
+        "name": "TwilioQuest",
+        "made": "Kerrie Lake",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/twilioquest-palette-example-by-kerrie-lakebgvgv3.png"],
+        "hexs": ["#ffffff", "#eaeae8", "#cecac9", "#abafb9", "#a18897", "#756276", "#5d4660", "#4c3250", "#432641", "#28192f", "#fb7575", "#fb3b64", "#c83157", "#8e375c", "#4f2351", "#351544", "#f74a53", "#f22f46", "#bc1642", "#fcc539", "#f87b1b", "#f8401b", "#bd2709", "#7c122b", "#ffe08b", "#fac05a", "#eb8f48", "#d17441", "#c75239", "#b12935", "#fdbd8f", "#f0886b", "#d36853", "#ae454a", "#8c3132", "#542323", "#a85848", "#83404c", "#67314b", "#3f2323", "#d49577", "#9f705a", "#845750", "#633b3f", "#7bd7a9", "#52b281", "#148568", "#146756", "#22474c", "#102f34", "#ebff8b", "#b3e363", "#4cbd56", "#2f8735", "#0b5931", "#97bf6e", "#899f66", "#61855a", "#4c6051", "#73dff2", "#2abbd0", "#315dcd", "#472a9c", "#a0d8d7", "#7dbefa", "#668faf", "#585d81", "#45365d", "#f6bafe", "#d59ff4", "#b070eb", "#7c3ce1", "#dbcfb1", "#a9a48d", "#7b8382", "#5f5f6e"],
+        "cols": ["rainbow"],
+        "tags": []
+    },
+    {
+        "name": "",
+        "made": "",
+        "webs": "",
+        "desc": "",
+        "imgs": [],
+        "hexs": [],
+        "cols": [],
+        "tags": []
+    },
+    {
         "name": "",
         "made": "",
         "webs": "",
