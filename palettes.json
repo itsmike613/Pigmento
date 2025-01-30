@@ -131,6 +131,16 @@
         "tags": []
     },
     {
+        "name": "Pigment",
+        "made": "polyphrog",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/pigment-palette-example-by-isau2xkxj.png"],
+        "hexs": ["#553e5b", "#928f8e", "#f8f8d1", "#6d8c4a", "#4a443c", "#342121", "#7b4136", "#c59846"],
+        "cols": ["grey", "brown", "green"],
+        "tags": []
+    },
+    {
         "name": "Oil Oak",
         "made": "polyphrog",
         "webs": "Lospec",
