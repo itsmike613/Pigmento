@@ -161,13 +161,13 @@
         "tags": []
     },
     {
-        "name": "",
-        "made": "",
-        "webs": "",
-        "desc": "",
-        "imgs": [],
-        "hexs": [],
-        "cols": [],
+        "name": "BoBoLink04",
+        "made": "Snowy Owl",
+        "webs": "Lospec",
+        "desc": "Bobolink04 is a color palette inspired by The Legend of Zelda, and created for the lospec 2buary color palette contest.",
+        "imgs": ["https://cdn.lospec.com/palette-examples/bobolink04-palette-example-by-snowy-owl-884835.png"],
+        "hexs": ["#28344e", "#399071", "#ee9172", "#dccab7"],
+        "cols": ["green", "blue", "pink"],
         "tags": []
     },
     {
