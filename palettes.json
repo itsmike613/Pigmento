@@ -22,7 +22,7 @@
     },
     {
         "name": "Jehkoba 64",
-        "made": "",
+        "made": "Jehkoba",
         "webs": "Lospec",
         "desc": "",
         "imgs": ["https://cdn.lospec.com/palette-examples/jehkoba64-palette-example-by-jehkoba-363533.png"],
@@ -32,7 +32,7 @@
     },
     {
         "name": "Jehkoba 32",
-        "made": "",
+        "made": "Jehkoba",
         "webs": "Lospec",
         "desc": "",
         "imgs": ["https://cdn.lospec.com/palette-examples/jehkoba32-palette-example-by-jehkoba-419634.png"],
@@ -42,7 +42,7 @@
     },
     {
         "name": "Jehkoba 16",
-        "made": "",
+        "made": "Jehkoba",
         "webs": "Lospec",
         "desc": "",
         "imgs": ["https://cdn.lospec.com/palette-examples/jehkoba16-palette-example-by-jehkoba-643025.png"],
@@ -51,13 +51,13 @@
         "tags": []
     },
     {
-        "name": "",
-        "made": "",
-        "webs": "",
-        "desc": "",
-        "imgs": [],
-        "hexs": [],
-        "cols": [],
+        "name": "1 Bit Monitor Glow",
+        "made": "Polyducks",
+        "webs": "Lospec",
+        "desc": "1bit monitor glow - a bold, punchy 1-bit palette by Polyducks for making art with two colours. A mildly cyan black with a mildly green white - the contrast helps the colours ping.",
+        "imgs": ["https://cdn.lospec.com/palette-examples/1bit-monitor-glow-palette-example-palette-usage-example-by-polyducks-5dc84e.png", "https://cdn.lospec.com/palette-examples/1bit-monitor-glow-palette-example-by-bitbitssfk69p.png", "https://cdn.lospec.com/palette-examples/1bit-monitor-glow-palette-example-by-vera-001178.png", "https://cdn.lospec.com/palette-examples/1bit-monitor-glow-palette-example-by-qirlfriend-614104.png", "https://cdn.lospec.com/palette-examples/1bit-monitor-glow-palette-example-by-psyklon-503033.png", "https://cdn.lospec.com/palette-examples/1bit-monitor-glow-palette-example-by-mycha-el7-097178.png", "https://cdn.lospec.com/palette-examples/1bit-monitor-glow-palette-example-by-pablo-barria-870347.png"],
+        "hexs": ["#222323", "#f0f6f0"],
+        "cols": ["white", "black"],
         "tags": []
     },
     {
