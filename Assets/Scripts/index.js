@@ -1,6 +1,6 @@
 const jsonURL = 'palettes.json';
 let data = [];
-let filters = { search: '', tags: [], min: 4, max: 6 };
+let filters = { search: '', tags: [], min: 4, max: 5 };
 
 fetch(jsonURL)
     .then(res => res.json())

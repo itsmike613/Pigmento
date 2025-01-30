@@ -211,14 +211,14 @@
         "tags": ["Neon"]
     },
     {
-        "name": "",
-        "made": "",
-        "webs": "",
-        "desc": "",
-        "imgs": [],
-        "hexs": [],
-        "cols": [],
-        "tags": []
+        "name": "Lost Century",
+        "made": "CopheeMoth",
+        "webs": "Lospec",
+        "desc": "A palette inspired by the Bestiarium of Aloys Zötl (1835)",
+        "imgs": ["https://cdn.lospec.com/palette-examples/lost-century-palette-example-by-nura-6037dd.png", "https://cdn.lospec.com/palette-examples/lost-century-palette-example-bywbmsup.png"],
+        "hexs": ["#d1b187", "#c77b58", "#ae5d40", "#79444a", "#4b3d44", "#ba9158", "#927441", "#4d4539", "#77743b", "#b3a555", "#d2c9a5", "#8caba1", "#4b726e", "#574852", "#847875", "#ab9b8e"],
+        "cols": ["brown", "green"],
+        "tags": ["Vintage", "Desaturated"]
     },
     {
         "name": "",
