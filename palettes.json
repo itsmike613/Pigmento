@@ -71,6 +71,16 @@
         "tags": []
     },
     {
+        "name": "Puff Ball 6",
+        "made": "polyphrog",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/puffball-8-palette-example-by-polyphrogfqgjne.png", "https://cdn.lospec.com/palette-examples/puffball-6-palette-example-by-interprete-me-259202.png", "https://cdn.lospec.com/palette-examples/puffball-6-palette-example-by-interprete-me-328183.png"],
+        "hexs": ["#eedbc8", "#e0bb68", "#97b34e", "#d58353", "#548b71", "#5a473e"],
+        "cols": ["yellow", "green"],
+        "tags": []
+    },
+    {
         "name": "",
         "made": "",
         "webs": "",
