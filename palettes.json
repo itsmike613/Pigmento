@@ -6,17 +6,10 @@
         "tags": ["Pastel"]
     },
     {
-        "name": "Palette 2",
-        "description": "A vibrant and warm color mix.",
-        "hexs": ["#FF5733", "#FF8D1A", "#FFD700", "#ADFF2F", "#32CD32", "#8A2BE2"],
-        "cols": ["red", "green"],
-        "tags": ["Pastel"]
-    },
-    {
         "name": "Palette 3",
         "description": "A cool and calming blue gradient.",
         "hexs": ["#001F3F", "#0074D9", "#7FDBFF"],
-        "cols": ["red", "green"],
+        "cols": ["orange", "purple"],
         "tags": ["Vibrant"]
     }
 ]
