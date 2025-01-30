@@ -111,6 +111,26 @@
         "tags": []
     },
     {
+        "name": "Quested Valley",
+        "made": "polyphrog",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/quested-valley-palette-example-by-polyphorge-60acac.png"],
+        "hexs": ["#000000", "#4a2400", "#2a3039", "#944800", "#646d4d", "#a0a14f", "#a9a8b7", "#deb652", "#ffffff"],
+        "cols": ["grey", "brown", "green"],
+        "tags": []
+    },
+    {
+        "name": "Oil Oak",
+        "made": "polyphrog",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": [],
+        "hexs": [],
+        "cols": [],
+        "tags": []
+    },
+    {
         "name": "Oil Oak",
         "made": "polyphrog",
         "webs": "Lospec",
