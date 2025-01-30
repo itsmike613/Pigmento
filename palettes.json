@@ -6,6 +6,16 @@
         "tags": ["Christmas", "Holidays"]
     },
     {
+        "name": "Benten Pond",
+        "hexs": [
+            "#083b42", "#155355", "#4e8276", "#63a37c", "#292f25", "#494738", "#736f52", "#a5a27f", "#d8d2ae", "#304733", 
+            "#336339", "#4c8149", "#8dab6d", "#bf5f43", "#e3938b", "#f1d6c5", "#a2333a", "#193762", "#7cacac", "#573c5d", 
+            "#825f77"
+        ],
+        "cols": ["green"],
+        "tags": ["Japan", "Lush", "Water", "Foliage", "Greenery", "Vintage", "Japaneese"]
+    },
+    {
         "name": "Jehkoba 64",
         "hexs": [
             "#000000", "#fabbaf", "#eb758f", "#d94c8e", "#b32d7d", "#fa9891", "#ff7070", "#f53141", "#c40c2e", "#852264", 
