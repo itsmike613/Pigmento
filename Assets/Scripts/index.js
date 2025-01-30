@@ -1,4 +1,4 @@
-const jsonURL = 'data.json';
+const jsonURL = 'palettes.json';
 let data = [];
 let filters = { search: '', tags: [], min: null, max: null };
 
@@ -48,8 +48,8 @@ function displayResults() {
         return (
             (filters.search === '' || item.name.toLowerCase().includes(filters.search) || item.description.toLowerCase().includes(filters.search) || item.tags.some(tag => tag.includes(filters.search))) &&
             (filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag))) &&
-            (filters.min === null || item.value >= filters.min) &&
-            (filters.max === null || item.value <= filters.max)
+            (filters.min === null || item.tags.length >= filters.min) &&
+            (filters.max === null || item.tags.length <= filters.max)
         );
     });
 
@@ -58,7 +58,9 @@ function displayResults() {
                     <div class="card p-3">
                         <h5>${item.name}</h5>
                         <p>${item.description}</p>
-                        <small>Tags: ${item.tags.join(', ')}</small>
+                        <div class="palette-colors">
+                            ${item.tags.map(tag => `<div class="palette-color" style="background: ${tag};"></div>`).join('')}
+                        </div>
                     </div>
                 </div>
             `).join('');

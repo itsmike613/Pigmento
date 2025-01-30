@@ -1,20 +1,17 @@
 [
     {
-        "name": "Item 1",
-        "description": "Description of item 1.",
-        "tags": ["tag1", "tag2"],
-        "value": 10
+        "name": "Palette 1",
+        "description": "A soft pastel color palette.",
+        "tags": ["#C5ADED", "#F8ABEB", "#FFC8DD", "#BCE0FF", "#A2D2FF"]
     },
     {
-        "name": "Item 2",
-        "description": "Description of item 2.",
-        "tags": ["tag2", "tag3"],
-        "value": 25
+        "name": "Palette 2",
+        "description": "A vibrant and warm color mix.",
+        "tags": ["#FF5733", "#FF8D1A", "#FFD700", "#ADFF2F", "#32CD32", "#8A2BE2"]
     },
     {
-        "name": "Item 3",
-        "description": "Description of item 3.",
-        "tags": ["tag1", "tag3"],
-        "value": 15
+        "name": "Palette 3",
+        "description": "A cool and calming blue gradient.",
+        "tags": ["#001F3F", "#0074D9", "#7FDBFF"]
     }
 ]
