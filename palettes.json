@@ -81,9 +81,39 @@
         "tags": []
     },
     {
-        "name": "",
-        "made": "",
-        "webs": "",
+        "name": "Oil Oak",
+        "made": "polyphrog",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/oil-oak-palette-example-by-polyphrogrjq0wb.png"],
+        "hexs": ["#090110", "#1a1e25", "#3d3e32", "#6f653d"],
+        "cols": ["black", "brown"],
+        "tags": []
+    },
+    {
+        "name": "Pro Special 8",
+        "made": "polyphrog",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/prospecal-8-palette-example-by-polyphorge-600c4a.png"],
+        "hexs": ["#6db5ba", "#26544c", "#76aa3a", "#fbfdbe", "#d23c4f", "#2b1328", "#753d38", "#efad5f"],
+        "cols": ["brown", "green"],
+        "tags": []
+    },
+    {
+        "name": "Grey Mist",
+        "made": "polyphrog",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/greyveyard-palette-example-by-polyphorge-603d66.png"],
+        "hexs": ["#f1ffe0", "#988171", "#463534", "#1e1721"],
+        "cols": ["grey", "brown"],
+        "tags": []
+    },
+    {
+        "name": "Oil Oak",
+        "made": "polyphrog",
+        "webs": "Lospec",
         "desc": "",
         "imgs": [],
         "hexs": [],
