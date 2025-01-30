@@ -8,7 +8,8 @@
     <meta content="Pigmento" property="og:title" />
     <meta content="The place to go for color palettes and gradients." property="og:description" />
     <meta content="https://itsmike613.github.io/pigmento/" property="og:url" />
-    <meta content="https://github.com/itsmike613/pigmento/blob/main/Assets/Images/logo.png?raw=true" property="og:image" />
+    <meta content="https://github.com/itsmike613/pigmento/blob/main/Assets/Images/logo.png?raw=true"
+        property="og:image" />
     <meta content="#2E8DDF" data-react-helmet="true" name="theme-color" />
 
     <!-- Tab -->
@@ -22,127 +23,25 @@
 
 <body>
     <div class="container py-5">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <input type="text" class="form-control me-2" placeholder="Search">
-            <button class="btn btn-outline-primary" data-bs-toggle="offcanvas"
-                data-bs-target="#filters">Filters</button>
+        <div class="d-flex mb-3">
+            <input type="text" id="search" class="form-control me-2" placeholder="Search...">
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#filterCanvas">Filters</button>
         </div>
+        <p id="result-count" class="mb-3">Showing 0 results</p>
+        <div id="results" class="row row-cols-1 row-cols-md-3 g-3"></div>
+    </div>
 
-        <div class="row g-3"></div>
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="filters">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title">Filters</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form>
-                    <div class="mb-3">
-                        <label class="form-label">Has the colors</label>
-                        <div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="white" id="white">
-                                <label class="form-check-label" for="white">White</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="grey" id="grey">
-                                <label class="form-check-label" for="grey">Grey</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="black" id="black">
-                                <label class="form-check-label" for="black">Black</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="brown" id="brown">
-                                <label class="form-check-label" for="brown">Brown</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="red" id="red">
-                                <label class="form-check-label" for="red">Red</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="orange" id="orange">
-                                <label class="form-check-label" for="orange">Orange</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="yellow" id="yellow">
-                                <label class="form-check-label" for="yellow">Yellow</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="green" id="green">
-                                <label class="form-check-label" for="green">Green</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="blue" id="blue">
-                                <label class="form-check-label" for="blue">Blue</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="purple" id="purple">
-                                <label class="form-check-label" for="purple">Purple</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="cont" value="pink" id="pink">
-                                <label class="form-check-label" for="pink">Pink</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Palette temperature</label>
-                        <div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="temp" value="warm" id="warm">
-                                <label class="form-check-label" for="warm">Warm Colors</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="temp" value="cool" id="cool">
-                                <label class="form-check-label" for="cool">Cool Colors</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="temp" value="neutral"
-                                    id="neutral">
-                                <label class="form-check-label" for="neutral">Neutral Colors</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Palette tags</label>
-                        <div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="tags" value="pastel" id="pastel">
-                                <label class="form-check-label" for="pastel">Pastel</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="tags" value="brand" id="brand">
-                                <label class="form-check-label" for="brand">Brand</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="tags" value="skin" id="skin">
-                                <label class="form-check-label" for="skin">Skin Tones</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="count" class="form-label">Number of colors</label>
-                        <input type="range" class="form-range" id="count" name="count" min="2" max="64">
-                        <div class="d-flex justify-content-between">
-                            <span>2</span>
-                            <span>64</span>
-                        </div>
-                    </div>
-                </form>
-            </div>
+    <div class="offcanvas offcanvas-end" id="filterCanvas">
+        <div class="offcanvas-header">
+            <h5>Filters</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="details">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title"></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-            </div>
+        <div class="offcanvas-body">
+            <h6>Tags</h6>
+            <div id="tag-filters"></div>
+            <h6 class="mt-3">Range</h6>
+            <input type="number" id="min-value" class="form-control mb-2" placeholder="Min" onchange="updateFilters()">
+            <input type="number" id="max-value" class="form-control" placeholder="Max" onchange="updateFilters()">
         </div>
     </div>
 

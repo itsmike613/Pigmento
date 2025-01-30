@@ -1,16 +1,20 @@
 [
     {
-        "name": "Sunny Vibes",
-        "hexs": ["#FF5733", "#8D5B4B"],
-        "cont": ["red", "brown"],
-        "tags": ["brand"],
-        "temp": "warm"
+        "name": "Item 1",
+        "description": "Description of item 1.",
+        "tags": ["tag1", "tag2"],
+        "value": 10
     },
     {
-        "name": "Cool Evening",
-        "hexs": ["#6C5B7F", "#355C7D", "#F8B400"],
-        "cont": ["blue"],
-        "tags": ["pastel", "skin"],
-        "temp": "cool"
+        "name": "Item 2",
+        "description": "Description of item 2.",
+        "tags": ["tag2", "tag3"],
+        "value": 25
+    },
+    {
+        "name": "Item 3",
+        "description": "Description of item 3.",
+        "tags": ["tag1", "tag3"],
+        "value": 15
     }
 ]
