@@ -54,16 +54,21 @@ function displayResults() {
     });
 
     document.getElementById('results').innerHTML = filteredData.map(item => `
-                <div class="col">
-                    <div class="card p-3">
-                        <h5>${item.name}</h5>
-                        <p>${item.description}</p>
-                        <div class="palette-colors">
-                            ${item.tags.map(tag => `<div class="palette-color" style="background: ${tag};"></div>`).join('')}
-                        </div>
-                    </div>
+        <div class="col-md-4">
+			<div class="palette-card">
+				<div class="palette-colors">
+                    ${item.hexs.map(hex => `<div class="palette-color" style="background: ${hex};"></div>`).join('')}
                 </div>
-            `).join('');
+				<div class="palette-info">
+					<div class="details">
+						<h6>${item.name}</h6>
+						<p>${item.hexs.length} Colors • Theme: Pastels</p>
+					</div>
+					<i class="ph ph-dots-three-outline details-icon"></i>
+				</div>
+			</div>
+		</div>
+    `).join('');
 
     document.getElementById('result-count').textContent = `Showing ${filteredData.length} results`;
 }
