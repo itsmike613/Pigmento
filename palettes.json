@@ -181,6 +181,66 @@
         "tags": []
     },
     {
+        "name": "Soft Serve 4",
+        "made": "Snowy Owl",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/softserve-4-palette-example-by-snowy-owl-2-612403.png"],
+        "hexs": ["#e64270", "#64c1bd", "#ead762", "#e3e6e8"],
+        "cols": ["white", "yellow", "blue", "pink"],
+        "tags": ["Pastel"]
+    },
+    {
+        "name": "Vireo",
+        "made": "Snowy Owl",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/vireo-4-palette-example-by-snowy-owl-399356.png"],
+        "hexs": ["#27393f", "#6f535b", "#649092", "#cfc89d"],
+        "cols": ["brown", "yellow", "blue"],
+        "tags": ["Retro"]
+    },
+    {
+        "name": "",
+        "made": "",
+        "webs": "",
+        "desc": "",
+        "imgs": [],
+        "hexs": [],
+        "cols": [],
+        "tags": []
+    },
+    {
+        "name": "",
+        "made": "",
+        "webs": "",
+        "desc": "",
+        "imgs": [],
+        "hexs": [],
+        "cols": [],
+        "tags": []
+    },
+    {
+        "name": "",
+        "made": "",
+        "webs": "",
+        "desc": "",
+        "imgs": [],
+        "hexs": [],
+        "cols": [],
+        "tags": []
+    },
+    {
+        "name": "",
+        "made": "",
+        "webs": "",
+        "desc": "",
+        "imgs": [],
+        "hexs": [],
+        "cols": [],
+        "tags": []
+    },
+    {
         "name": "",
         "made": "",
         "webs": "",
