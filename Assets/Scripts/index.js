@@ -53,10 +53,12 @@ function displayResults() {
         );
     });
 
+    /* Randomize order of results - remove to keep in order */
     for (let i = filteredData.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [filteredData[i], filteredData[j]] = [filteredData[j], filteredData[i]];
     }
+    /* ---------------------------------------------------- */
 
     document.getElementById('results').innerHTML = filteredData.map(item => `
         <div class="col-md-4">
