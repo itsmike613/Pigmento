@@ -251,13 +251,13 @@
         "tags": []
     },
     {
-        "name": "",
-        "made": "",
-        "webs": "",
+        "name": "Island Joy 16",
+        "made": "Kerrie Lake",
+        "webs": "Lospec",
         "desc": "",
-        "imgs": [],
-        "hexs": [],
-        "cols": [],
+        "imgs": ["https://cdn.lospec.com/palette-examples/island-joy-16-palette-example-palette-usage-example-by-kerrie-lake-5ae4d7.png"],
+        "hexs": ["#ffffff", "#6df7c1", "#11adc1", "#606c81", "#393457", "#1e8875", "#5bb361", "#a1e55a", "#f7e476", "#f99252", "#cb4d68", "#6a3771", "#c92464", "#f48cb6", "#f7b69e", "#9b9c82"],
+        "cols": ["rainbow"],
         "tags": []
     },
     {
