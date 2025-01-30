@@ -141,9 +141,49 @@
         "tags": []
     },
     {
-        "name": "Oil Oak",
-        "made": "polyphrog",
+        "name": "Bumble Bit",
+        "made": "Snowy Owl",
         "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/bumblebit-palette-example-by-snowy-owl-6137c8.png", "https://cdn.lospec.com/palette-examples/bumblebit-palette-example-by-inkipeqyc.png"],
+        "hexs": ["#272946", "#eda031", "#e7ffee"],
+        "cols": ["white", "yellow", "blue"],
+        "tags": []
+    },
+    {
+        "name": "Rubble 4",
+        "made": "Snowy Owl",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/rubble4-palette-example-by-snowy-owl-61660c.png"],
+        "hexs": ["#d6e2b3", "#d1b250", "#488880", "#362d43"],
+        "cols": ["yellow", "green", "blue"],
+        "tags": []
+    },
+    {
+        "name": "",
+        "made": "",
+        "webs": "",
+        "desc": "",
+        "imgs": [],
+        "hexs": [],
+        "cols": [],
+        "tags": []
+    },
+    {
+        "name": "",
+        "made": "",
+        "webs": "",
+        "desc": "",
+        "imgs": [],
+        "hexs": [],
+        "cols": [],
+        "tags": []
+    },
+    {
+        "name": "",
+        "made": "",
+        "webs": "",
         "desc": "",
         "imgs": [],
         "hexs": [],
