@@ -188,7 +188,7 @@
         "imgs": ["https://cdn.lospec.com/palette-examples/softserve-4-palette-example-by-snowy-owl-2-612403.png"],
         "hexs": ["#e64270", "#64c1bd", "#ead762", "#e3e6e8"],
         "cols": ["white", "yellow", "blue", "pink"],
-        "tags": ["Pastel"]
+        "tags": ["Neon"]
     },
     {
         "name": "Vireo",
@@ -231,13 +231,13 @@
         "tags": ["Pastel"]
     },
     {
-        "name": "",
-        "made": "",
-        "webs": "",
-        "desc": "",
-        "imgs": [],
-        "hexs": [],
-        "cols": [],
+        "name": "Cophee 4",
+        "made": "CopheeMoth",
+        "webs": "Lospec",
+        "desc": "A palette with a cozy feeling, inspired by a cup of mocha.",
+        "imgs": ["https://cdn.lospec.com/palette-examples/cophee-4-palette-example-by-copheemoth-712364.png"],
+        "hexs": ["#e2c3a1", "#c19168", "#855839", "#4c2413"],
+        "cols": ["brown"],
         "tags": []
     },
     {
