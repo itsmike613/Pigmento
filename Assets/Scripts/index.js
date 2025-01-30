@@ -70,5 +70,5 @@ function displayResults() {
 		</div>
     `).join('');
 
-    document.getElementById('result-count').textContent = `Showing ${filteredData.length} results`;
+    document.getElementById('result-count').textContent = `Showing ${filteredData.length} results of ${data.length} total palettes`;
 }
