@@ -46,7 +46,7 @@ function updateFilters() {
 function displayResults() {
     const filteredData = data.filter(item => {
         return (
-            (filters.search === '' || item.name.toLowerCase().includes(filters.search) || item.description.toLowerCase().includes(filters.search) || item.tags.some(tag => tag.includes(filters.search))) &&
+            (filters.search === '' || item.name.toLowerCase().includes(filters.search) || item.cols.some(col => col.includes(filters.search)) || item.tags.some(tag => tag.includes(filters.search))) &&
             (filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag))) &&
             (filters.min === null || item.hexs.length >= filters.min) &&
             (filters.max === null || item.hexs.length <= filters.max)
