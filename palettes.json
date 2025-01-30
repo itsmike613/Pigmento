@@ -201,14 +201,14 @@
         "tags": ["Retro"]
     },
     {
-        "name": "",
-        "made": "",
-        "webs": "",
+        "name": "Neo 5",
+        "made": "Luff",
+        "webs": "Lospec",
         "desc": "",
-        "imgs": [],
-        "hexs": [],
-        "cols": [],
-        "tags": []
+        "imgs": ["https://cdn.lospec.com/palette-examples/neo-5-palette-example-by-radiaction-612c0c.png"],
+        "hexs": ["#0e0e0e", "#5433be", "#e624af", "#3df9ea", "#effafa"],
+        "cols": ["black", "blue", "pink"],
+        "tags": ["Neon"]
     },
     {
         "name": "",
