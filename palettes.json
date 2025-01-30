@@ -61,6 +61,16 @@
         "tags": []
     },
     {
+        "name": "Titan Stone",
+        "made": "polyphrog",
+        "webs": "Lospec",
+        "desc": "",
+        "imgs": ["https://cdn.lospec.com/palette-examples/titanstone-palette-example-by-polyphorge-607a26.png"],
+        "hexs": ["#150413", "#635c6d", "#ffffd1"],
+        "cols": ["white", "grey", "black"],
+        "tags": []
+    },
+    {
         "name": "",
         "made": "",
         "webs": "",
