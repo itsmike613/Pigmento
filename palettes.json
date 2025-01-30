@@ -171,13 +171,13 @@
         "tags": []
     },
     {
-        "name": "",
-        "made": "",
-        "webs": "",
-        "desc": "",
-        "imgs": [],
-        "hexs": [],
-        "cols": [],
+        "name": "Fly Catcher 4",
+        "made": "Snowy Owl",
+        "webs": "Lospec",
+        "desc": "A high contrast froggy themed palette inspired by toads and bugs",
+        "imgs": ["https://cdn.lospec.com/palette-examples/flycatcher4-palette-example-by-snowy-owl-110693.png"],
+        "hexs": ["#0f1b33", "#a913a6", "#9bbe3e", "#e8e0d5"],
+        "cols": ["green", "purple"],
         "tags": []
     },
     {
